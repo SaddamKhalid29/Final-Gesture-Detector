@@ -2,6 +2,7 @@ package com.example.finalgesturedetector;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
+import androidx.core.view.MotionEventCompat;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         if(gestureDetectorCompat.onTouchEvent(event)){
             return true;
         }
+     //   int as= MotionEventCompat.getActionMasked(event);
         int action=event.getAction();
         switch (action){
             case MotionEvent.ACTION_DOWN:
